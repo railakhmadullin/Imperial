@@ -20,7 +20,9 @@ let package = Package(
         .library(name: "ImperialKeycloak", targets: ["ImperialCore", "ImperialKeycloak"]),
         .library(name: "ImperialMicrosoft", targets: ["ImperialCore", "ImperialMicrosoft"]),
         .library(name: "ImperialMixcloud", targets: ["ImperialCore", "ImperialMixcloud"]),
+        .library(name: "ImperialUpwork", targets: ["ImperialCore", "ImperialUpwork"]),
         .library(name: "ImperialShopify", targets: ["ImperialCore", "ImperialShopify"]),
+
         .library(
             name: "Imperial",
             targets: [
@@ -37,6 +39,7 @@ let package = Package(
                 "ImperialKeycloak",
                 "ImperialMicrosoft",
                 "ImperialMixcloud",
+                "ImperialUpwork",
                 "ImperialShopify",
             ]
         ),
@@ -66,6 +69,7 @@ let package = Package(
         .target(name: "ImperialKeycloak", dependencies: ["ImperialCore"], swiftSettings: swiftSettings),
         .target(name: "ImperialMicrosoft", dependencies: ["ImperialCore"], swiftSettings: swiftSettings),
         .target(name: "ImperialMixcloud", dependencies: ["ImperialCore"], swiftSettings: swiftSettings),
+        .target(name: "ImperialUpwork", dependencies: ["ImperialCore"], swiftSettings: swiftSettings),
         .target(name: "ImperialShopify", dependencies: ["ImperialCore"], swiftSettings: swiftSettings),
         .testTarget(
             name: "ImperialTests",
@@ -83,6 +87,7 @@ let package = Package(
                 .target(name: "ImperialKeycloak"),
                 .target(name: "ImperialMicrosoft"),
                 .target(name: "ImperialMixcloud"),
+                .target(name: "ImperialUpwork"),
                 .target(name: "ImperialShopify"),
                 .product(name: "VaporTesting", package: "vapor"),
             ],
